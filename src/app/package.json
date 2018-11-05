@@ -1,18 +1,20 @@
 {
-    "name": "fakepay",
-    "version": "1.0.0",
-    "description": "",
-    "main": "app.js",
-    "scripts": {
-      "test": "mocha test",
-      "start": "node app.js"
-    },
-    "author": "Keith Jackson",
-    "license": "MIT",
-    "dependencies": {
-    },
-    "devDependencies": {
-      "mocha": "^5.2.0"
-    }
+  "name": "fakepay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha test",
+    "start": "node app.js"
+  },
+  "author": "Keith Jackson",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.6.1",
+    "express": "^4.16.4",
+    "http": "0.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
   }
-  
+}
