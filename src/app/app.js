@@ -1,8 +1,11 @@
-const ServerManager = require('./server-manager')
+const Server = require('./server')
 
 function fakePay()
 {
-    const server = ServerManager()
+    const server = Server()
+
+    console.log('Starting FakePay...')
+    server.start()
 
     return {
         server: server
