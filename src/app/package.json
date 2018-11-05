@@ -12,7 +12,8 @@
   "dependencies": {
     "async": "^2.6.1",
     "express": "^4.16.4",
-    "http": "0.0.0"
+    "http": "0.0.0",
+    "optimist": "^0.6.1"
   },
   "devDependencies": {
     "mocha": "^5.2.0"

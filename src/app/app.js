@@ -4,14 +4,26 @@ const ArgumentProcessor = require('./arg-processor')
 function fakePay()
 {
     const runState = new ArgumentProcessor()
-    const server = new Server()
 
-    console.log('Starting FakePay...')
-    server.start()
+    if (runState.showModulesList) {
 
-    return {
-        args: runState.args,
-        server: server
+        runState.showHelp()
+
+    } else {
+
+        if (runState.isValid()) {
+
+            const server = new Server(runState)
+
+            console.log(`Starting FakePay for ${runState.paymentGateway}...`)
+            console.log(`Responding for ${runState.provider} ${runState.cardType} card.`)
+            server.start()
+
+        } else {
+
+            console.log('Unable to start FakePay. The provided arguments are invalid...')
+            runState.validationErrors.map((verr) => console.log(`- ${verr}`))
+        }
     }
 }
 
